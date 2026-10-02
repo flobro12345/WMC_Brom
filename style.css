@@ -1,0 +1,53 @@
+/* Vorhersage:
+   Ohne border-box beträgt die Gesamtbreite der Karte:
+   20rem + 1rem links + 1rem rechts + 2px links + 2px rechts.
+   Das ergibt 22rem + 4px.
+   Bei einer Root-Schriftgröße von 16px sind das 356px.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eef2f5;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    background-color: rgba(0, 120, 215, 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+nav a {
+    color: #005a9e;
+    margin-right: 1rem;
+}
+
+.karte {
+    width: 20rem;
+    max-width: 100%;
+    padding: 1rem;
+    border: 2px solid #005a9e;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside {
+    background-color: #dceaf5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
