@@ -1,40 +1,85 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über mich - Florian Brom</title>
+    <title>Formular</title>
 </head>
 <body>
+    <h1>Mein Formular</h1>
+    <p>Felder mit * sind Pflichtfelder.</p>
 
-    <header>
-        <h1>Über mich</h1>
-        <nav>
-            <a href="#about">Über mich</a>
-            <a href="#hobbies">Hobbies</a>
-        </nav>
-    </header>
+    <form action="mailto:DEINE-EMAIL@example.com?subject=Formularanfrage"
+          method="post" enctype="text/plain">
 
-    <main>
-        <article id="about" class="karte">
-            <h2>Das bin ich</h2>
-            <p>Mein Name ist Florian Brom und ich erstelle diese Webseite. Ich interessiere mich sehr für Informatik und erstelle gerne neue Projekte. In meiner Freizeit beschäftige ich mich viel mit Technologie und Programmierung.</p>
-            
-            <ul>
-                <li>Informatik</li>
-                <li>Programmierung</li>
-                <li>Webentwicklung</li>
-            </ul>
+        Vorname: *
+        <input type="text" name="vorname" required>
+        <br><br>
 
-            <img src="3349464-68469548-2560-1440.jpg" alt="Kylian Mbappé macht eine Salut-Geste" width="300">
-        </article>
+        Nachname: *
+        <input type="text" name="nachname" required>
+        <br><br>
 
-        <aside id="hobbies">
-            <h2>Mein Hobby</h2>
-            <p>In meiner Freizeit spiele und verfolge ich gerne Fußball und beschäftige mich mit moderner Technik.</p>
-        </aside>
-    </main>
+        Geschlecht:
+        <br>
+        <input type="radio" name="geschlecht" value="maennlich">Männlich
+        <input type="radio" name="geschlecht" value="weiblich">Weiblich
+        <input type="radio" name="geschlecht" value="divers">Divers
+        <input type="radio" name="geschlecht" value="keineAngabe" checked>Keine Angabe
+        <br><br>
 
+        Interessen:
+        <br>
+        <input type="checkbox" name="interesse" value="sport">Sport
+        <input type="checkbox" name="interesse" value="musik">Musik
+        <input type="checkbox" name="interesse" value="technik">Technik
+        <br><br>
+
+        Land:
+        <select name="land">
+            <option value="oesterreich" selected>Österreich</option>
+            <option value="deutschland">Deutschland</option>
+            <option value="schweiz">Schweiz</option>
+            <option value="anderes">Anderes Land</option>
+        </select>
+        <br><br>
+
+        Sprachen:
+        <br>
+        <select name="sprachen" multiple size="4">
+            <option value="deutsch">Deutsch</option>
+            <option value="englisch">Englisch</option>
+            <option value="franzoesisch">Französisch</option>
+            <option value="spanisch">Spanisch</option>
+        </select>
+        <br>
+        Für mehrere Antworten die Strg-Taste gedrückt halten.
+        <br><br>
+
+        Kommentar:
+        <br>
+        <textarea name="kommentar" rows="5" cols="40"
+                  placeholder="Fügen Sie Ihren Kommentar ein!"></textarea>
+        <br><br>
+
+        Geburtsdatum:
+        <input type="date" name="geburtsdatum">
+        <br><br>
+
+        Postleitzahl: *
+        <input type="text" name="postleitzahl"
+               pattern="[0-9]{4}"
+               maxlength="4"
+               placeholder="z. B. 1010"
+               title="Bitte genau vier Ziffern eingeben."
+               required>
+        <br><br>
+
+        <input type="hidden" name="seite" value="index.html">
+
+        <input type="submit" value="Formular abschicken">
+        <input type="reset" value="Formular zurücksetzen">
+
+    </form>
 </body>
 </html>
