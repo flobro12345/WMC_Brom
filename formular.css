@@ -1,0 +1,138 @@
+/* Padding und Rahmen werden in die Breite eingerechnet. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 4vh 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #243247;
+    background-color: #edf2f7;
+}
+
+/* Box-Modell: Inhalt, Innenabstand, Rahmen und Außenabstand */
+main {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px solid #d4deea;
+    border-radius: 12px;
+    background-color: white;
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: 2em;
+    color: #235a91;
+}
+
+.feld {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #aab8c7;
+    border-radius: 5px;
+    font: inherit;
+    color: inherit;
+    background-color: #fafcff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid #aab8c7;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.auswahl {
+    display: inline-block;
+    margin: 0.3rem 0.8rem 0.3rem 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.3rem;
+    accent-color: #235a91;
+}
+
+.hinweis {
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    color: #536174;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    max-width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #235a91;
+    border-radius: 5px;
+    font: inherit;
+    white-space: normal;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: #235a91;
+}
+
+input[type="reset"] {
+    color: #235a91;
+    background-color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #19436e;
+}
+
+input[type="reset"]:hover {
+    background-color: #edf2f7;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #235a91;
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+}
