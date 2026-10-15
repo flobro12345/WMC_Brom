@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+    <link rel="stylesheet" href="formular.css">
+</head>
+
+<body>
+    <h1>Mein Formular</h1>
+    <p>Felder mit * sind Pflichtfelder.</p>
+
+    <!-- DEINE-EMAIL@example.com durch deine E-Mail-Adresse ersetzen. -->
+    <form class="formular"
+          action="mailto:DEINE-EMAIL@example.com?subject=Formularanfrage"
+          method="post"
+          enctype="text/plain">
+
+        <div class="feld">
+            <label for="vorname">Vorname: *</label>
+            <input type="text" id="vorname" name="vorname" required>
+        </div>
+
+        <div class="feld">
+            <label for="nachname">Nachname: *</label>
+            <input type="text" id="nachname" name="nachname" required>
+        </div>
+
+        <fieldset>
+            <legend>Geschlecht</legend>
+
+            <label>
+                <input type="radio" name="geschlecht" value="maennlich">
+                Männlich
+            </label>
+
+            <label>
+                <input type="radio" name="geschlecht" value="weiblich">
+                Weiblich
+            </label>
+
+            <label>
+                <input type="radio" name="geschlecht" value="divers">
+                Divers
+            </label>
+
+            <label>
+                <input type="radio" name="geschlecht"
+                       value="keineAngabe" checked>
+                Keine Angabe
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interessen</legend>
+
+            <label>
+                <input type="checkbox" name="interesse" value="sport">
+                Sport
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesse" value="musik">
+                Musik
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesse" value="technik">
+                Technik
+            </label>
+        </fieldset>
+
+        <div class="feld">
+            <label for="land">Land:</label>
+            <select id="land" name="land">
+                <option value="oesterreich" selected>Österreich</option>
+                <option value="deutschland">Deutschland</option>
+                <option value="schweiz">Schweiz</option>
+                <option value="anderes">Anderes Land</option>
+            </select>
+        </div>
+
+        <div class="feld">
+            <label for="sprachen">Sprachen:</label>
+            <select id="sprachen" name="sprachen" multiple size="4"
+                    aria-describedby="sprachen-hinweis">
+                <option value="deutsch">Deutsch</option>
+                <option value="englisch">Englisch</option>
+                <option value="franzoesisch">Französisch</option>
+                <option value="spanisch">Spanisch</option>
+            </select>
+
+            <p id="sprachen-hinweis">
+                Für mehrere Antworten die Strg-Taste gedrückt halten.
+            </p>
+        </div>
+
+        <div class="feld">
+            <label for="kommentar">Kommentar:</label>
+            <textarea id="kommentar" name="kommentar"
+                      rows="5" cols="40"
+                      placeholder="Fügen Sie Ihren Kommentar ein!"></textarea>
+        </div>
+
+        <div class="feld">
+            <label for="geburtsdatum">Geburtsdatum:</label>
+            <input type="date" id="geburtsdatum" name="geburtsdatum">
+        </div>
+
+        <div class="feld">
+            <label for="postleitzahl">Postleitzahl: *</label>
+            <input type="text" id="postleitzahl" name="postleitzahl"
+                   pattern="[0-9]{4}"
+                   maxlength="4"
+                   inputmode="numeric"
+                   placeholder="z. B. 1010"
+                   title="Bitte genau vier Ziffern eingeben."
+                   required>
+        </div>
+
+        <input type="hidden" name="seite" value="Formular.html">
+
+        <button type="submit">Formular abschicken</button>
+        <button type="reset">Formular zurücksetzen</button>
+    </form>
+</body>
+</html>
